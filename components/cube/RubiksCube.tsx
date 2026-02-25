@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, RoundedBox } from "@react-three/drei";
 import type { Group } from "three";
@@ -116,6 +116,12 @@ function CubeGroup() {
 }
 
 export default function RubiksCube() {
+  const [isTouch, setIsTouch] = useState(false);
+
+  useEffect(() => {
+    setIsTouch("ontouchstart" in window || navigator.maxTouchPoints > 0);
+  }, []);
+
   return (
     <Canvas
       camera={{ position: [5, 4, 5], fov: 40 }}
@@ -126,7 +132,9 @@ export default function RubiksCube() {
       <directionalLight position={[5, 8, 5]} intensity={2} />
       <directionalLight position={[-5, -3, -5]} intensity={0.8} />
       <CubeGroup />
-      <OrbitControls enableZoom={false} enablePan={false} />
+      {!isTouch && (
+        <OrbitControls enableZoom={false} enablePan={false} />
+      )}
     </Canvas>
   );
 }

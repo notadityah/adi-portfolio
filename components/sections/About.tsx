@@ -8,21 +8,23 @@ const SHOW_IMAGE = false;
 export default function About() {
   return (
     <SectionWrapper id="about" className="border-t border-white/10">
-      <div className={`grid items-center gap-16 ${SHOW_IMAGE ? "md:grid-cols-2" : ""}`}>
+      <div
+        className={`grid items-center gap-16 ${SHOW_IMAGE ? "md:grid-cols-2" : ""}`}
+      >
         <div>
           <SectionLabel>About Me</SectionLabel>
-          <p className="mt-4 leading-relaxed text-white">
+          <p className="mt-4 leading-relaxed text-white text-justify">
             I am a Software & Data Engineer focused on building scalable systems
             where robust data infrastructure meets modern user experiences.
             <br />
             <br />
             With 4+ years at Accenture, I specialized in high-stakes data
-            engineering, architecting end-to-end ETL pipelines and ensuring the
-            integrity of massive enterprise data warehouses. I&apos;ve
-            transitioned that &ldquo;big data&rdquo; discipline into the modern
-            stack, building everything from AI-powered computer vision apps to
-            interactive, creative web interfaces with the belief that great
-            software is only as good as the data powering it.
+            engineering, building end-to-end ETL pipelines and ensuring the
+            integrity of massive enterprise data warehouses. I have transitioned
+            that &ldquo;big data&rdquo; discipline into the modern stack,
+            building everything from AI-powered computer vision apps to
+            interactive web interfaces with the belief that great software is
+            only as good as the data powering it.
           </p>
         </div>
 

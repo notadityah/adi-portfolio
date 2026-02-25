@@ -77,7 +77,7 @@ export default function Projects() {
               <h3 className="text-2xl font-semibold text-white sm:text-3xl lg:text-4xl">
                 {proj.title}
               </h3>
-              <span className="text-sm text-white">{proj.year}</span>
+              <span className="text-sm text-white/70">{proj.year}</span>
             </div>
 
             <p className="mt-3 text-sm leading-relaxed text-white">
@@ -96,9 +96,7 @@ export default function Projects() {
             </div>
 
             <div className="mt-4 flex items-center gap-6">
-              <ExternalLink href={proj.github}>
-                View more &rarr;
-              </ExternalLink>
+              <ExternalLink href={proj.github}>View more &rarr;</ExternalLink>
               {proj.website && (
                 <ExternalLink href={proj.website}>
                   Live site &rarr;
