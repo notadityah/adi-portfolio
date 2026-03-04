@@ -4,21 +4,28 @@ import ExternalLink from "@/components/ui/ExternalLink";
 
 const projects = [
   {
-    title: "BirdDex",
+    title: "BirdTag",
     description:
-      "Pokédex-like collection app for common Australian birds. Uses a YOLO-trained computer vision model to detect birds in photographs and add them to a user\u2019s collection.",
+      "A bird detection and tagging system using Amazon AWS for bird observation and identification.",
     stack: [
-      "Vue.js",
-      "Tailwind CSS",
+      "HTML",
+      "CSS",
+      "JavaScript",
       "YOLO",
-      "AWS API Gateway",
-      "Lambda",
+      "CloudFront",
+      "Cognito",
+      "IAM",
+      "ECR",
       "S3",
-      "Aurora DSQL",
+      "Lambda",
+      "DynamoDB",
+      "DynamoDB Streams",
+      "API Gateway",
+      "SNS",
+      "CloudWatch",
     ],
-    year: "2026",
-    github: "https://github.com/notadityah/birddex",
-    website: "https://birddex.fun",
+    year: "2025",
+    github: "https://github.com/notadityah/BirdTag",
   },
   {
     title: "JobDetective",
@@ -35,7 +42,6 @@ const projects = [
     ],
     year: "2025",
     github: "https://github.com/notadityah/JobDetective",
-    website: null,
   },
   {
     title: "ProjectDemeter",
@@ -52,7 +58,6 @@ const projects = [
     ],
     year: "2025",
     github: "https://github.com/notadityah/ProjectDemeter",
-    website: null,
   },
   {
     title: "FreshMate",
@@ -61,7 +66,6 @@ const projects = [
     stack: ["Kotlin", "TFLite", "Firebase Auth", "Firestore"],
     year: "2025",
     github: "https://github.com/notadityah/freshmate",
-    website: null,
   },
 ];
 
@@ -97,11 +101,6 @@ export default function Projects() {
 
             <div className="mt-4 flex items-center gap-6">
               <ExternalLink href={proj.github}>View more &rarr;</ExternalLink>
-              {proj.website && (
-                <ExternalLink href={proj.website}>
-                  Live site &rarr;
-                </ExternalLink>
-              )}
             </div>
           </div>
         ))}
