@@ -4,7 +4,7 @@ import ExternalLink from "@/components/ui/ExternalLink";
 
 const projects = [
   {
-    title: "BirdTag",
+    title: "BirdDex",
     description:
       "A bird detection and tagging system using Amazon AWS for bird observation and identification.",
     stack: [
@@ -12,20 +12,21 @@ const projects = [
       "CSS",
       "JavaScript",
       "YOLO",
+      "ONNX",
       "CloudFront",
-      "Cognito",
+      "BetterAuth",
       "IAM",
       "ECR",
       "S3",
       "Lambda",
-      "DynamoDB",
-      "DynamoDB Streams",
+      "PostgreSQL",
       "API Gateway",
-      "SNS",
       "CloudWatch",
+      "AWS CDK",
     ],
     year: "2025",
-    github: "https://github.com/notadityah/BirdTag",
+    github: "https://github.com/notadityah/BirdDex",
+    live: "https://birddex.fun",
   },
   {
     title: "JobDetective",
@@ -101,6 +102,9 @@ export default function Projects() {
 
             <div className="mt-4 flex items-center gap-6">
               <ExternalLink href={proj.github}>View more &rarr;</ExternalLink>
+              {proj.live ? (
+                <ExternalLink href={proj.live}>Live site &rarr;</ExternalLink>
+              ) : null}
             </div>
           </div>
         ))}
